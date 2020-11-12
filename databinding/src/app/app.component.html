@@ -10,19 +10,26 @@
     <hr>
 
     <h4>Username</h4> 
+
+    <!-- input without 2 way binding -->
+    <!-- <input 
+    type="text"
+    class="form-control"
+    (input)="onUpdateUserName($event)"> -->
+
+    <!-- input using 2 way binding -->
     <input 
       type="text"
       class="form-control"
-      (input)="onUpdateUserName($event)">
+      [(ngmodel)]="username">
       <br>
 
       <button class="btn btn-primary"
       [disabled]="!allowUsernameButtonClick"
-      (click)="onClearUsername()"
-      >Clear Username</button>
+      (click)="onClearUsername()">Clear Username</button>
 
     <hr>
-      <p>Current Username: {{ getUsername() }}</p>
+      <p>Current Username: {{ username }}</p>
     
   </div>
 </div>
