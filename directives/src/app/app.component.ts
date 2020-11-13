@@ -16,4 +16,8 @@ export class AppComponent {
     this.button_log.push(this.count);
   }
 
+  getBackgroundColor(item){
+    return item > 4 ? 'navy' : 'white';
+  }
+
 }

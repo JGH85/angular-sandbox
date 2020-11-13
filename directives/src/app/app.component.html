@@ -14,7 +14,12 @@
       >Display Details</button>
 
       <p *ngIf="showSecretText">This paragraph is top secret!</p>
-      <p>test {{count}}</p>
+      <!-- <p>test {{count}}</p> -->
+
+      <div *ngFor="let myitem of button_log"
+      [ngStyle]="{backgroundColor: getBackgroundColor(myitem)}"
+      [ngClass]="{whiteItems: myitem > 4 }"
+      >{{myitem}}</div>
     </div>
   </div>
 </div>
