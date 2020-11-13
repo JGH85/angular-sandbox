@@ -7,17 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   showSecretText = false;
-  count = 0;
+  // count = 0;
   button_log = [];
 
-  OnButtonClick(){
+  // OnButtonClick(){
+  //   this.showSecretText = !this.showSecretText;
+  //   this.count ++
+  //   this.button_log.push(this.count);
+  // }
+    OnButtonClick(){
     this.showSecretText = !this.showSecretText;
-    this.count ++
-    this.button_log.push(this.count);
+    // this.count ++
+    this.button_log.push(new Date());
   }
 
-  getBackgroundColor(item){
-    return item > 4 ? 'navy' : 'white';
+  getBackgroundColor(i){
+    return i >= 4 ? 'navy' : 'white';
   }
 
 }
